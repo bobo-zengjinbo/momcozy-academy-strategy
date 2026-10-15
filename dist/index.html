@@ -101,8 +101,8 @@
                   <div><h3>品牌策略</h3><p>通用策略框架已建立；具体品牌结论等待后续制定。</p></div><b>OPEN →</b>
                 </button>
                 <button class="workstream-card card-active" data-open-tab="visual">
-                  <span class="workstream-no">03</span><span class="status-badge status-live">IN PROGRESS</span>
-                  <div><h3>视觉策略</h3><p>竞品研究已完成；视觉关键词与创意路线待设计。</p></div><b>OPEN →</b>
+                  <span class="workstream-no">03</span><span class="status-badge status-live">FRAMEWORK + RESEARCH</span>
+                  <div><h3>视觉策略</h3><p>策略结构已建立；竞品分析作为其中一类研究单独打开。</p></div><b>OPEN →</b>
                 </button>
                 <button class="workstream-card card-pink" data-open-tab="identity">
                   <span class="workstream-no">04</span><span class="status-badge">待设计</span>
@@ -291,16 +291,71 @@
 
         <section class="workspace-panel" id="panel-visual" role="tabpanel" aria-labelledby="tab-visual" data-panel="visual" hidden>
           <div class="visual-workspace">
-            <nav class="subtab-bar" role="tablist" aria-label="视觉策略子模块">
+            <nav class="subtab-bar visual-detail-nav" id="visualDetailNav" role="tablist" aria-label="视觉竞品分析子模块" hidden>
+              <button class="detail-back" type="button" data-visual-open="framework">← 返回视觉策略</button>
               <button class="subtab is-active" data-subtab="competitor" role="tab" aria-selected="true">竞品案例 <span>LIVE</span></button>
               <button class="subtab" data-subtab="matrix" role="tab" aria-selected="false">对比矩阵</button>
               <button class="subtab" data-subtab="opportunity" role="tab" aria-selected="false">机会判断</button>
-              <button class="subtab" data-subtab="keywords" role="tab" aria-selected="false">视觉关键词 <span>TODO</span></button>
-              <button class="subtab" data-subtab="directions" role="tab" aria-selected="false">创意路线 <span>TODO</span></button>
             </nav>
 
             <div class="visual-content">
-              <section class="visual-subpanel is-active" data-subpanel="competitor">
+              <section class="visual-subpanel is-active" data-subpanel="framework">
+                <div class="panel-scroll">
+                  <div class="content-frame module-page framework-page visual-framework-page">
+                    <header class="module-header"><div><span>03 / VISUAL STRATEGY FRAMEWORK</span><h1>视觉策略</h1></div><p>视觉策略定义品牌应该以怎样的审美立场被理解和记住；它连接品牌策略与后续视觉识别系统，而不是直接规定 Logo、颜色或字体。</p></header>
+
+                    <div class="framework-status visual-framework-status">
+                      <div><span>FRAMEWORK + RESEARCH</span><strong>结构已建立，竞品视觉研究已完成</strong></div>
+                      <div class="framework-progress"><i></i><span>01 / 12 已完成</span></div>
+                    </div>
+
+                    <section class="framework-map visual-framework-map" aria-label="视觉策略通用框架">
+                      <article class="framework-column framework-discover">
+                        <header><span>01</span><div><small>GROUND</small><h2>视觉依据</h2></div></header>
+                        <ol>
+                          <li><b>品牌策略输入</b><span>品牌定位、价值主张和个性为视觉提供什么约束？</span><em>状态：等待品牌策略</em></li>
+                          <li><b>受众与文化语境</b><span>目标人群习惯什么，又对哪些表达敏感？</span><em>产出：文化与审美洞察</em></li>
+                          <li class="framework-action"><button type="button" data-visual-open="competitor"><b>视觉竞品分析</b><span>案例、横向矩阵与机会判断已经整理完成。</span><em>OPEN RESEARCH →</em></button></li>
+                        </ol>
+                      </article>
+
+                      <article class="framework-column framework-define">
+                        <header><span>02</span><div><small>POSITION</small><h2>视觉定位</h2></div></header>
+                        <ol start="4">
+                          <li><b>视觉机会定义</b><span>我们应该占据怎样的视觉位置，而不只是看起来“好看”？</span><em>产出：视觉机会陈述</em></li>
+                          <li class="framework-action is-todo"><button type="button" data-visual-open="keywords"><b>关键词与反关键词</b><span>明确应该是什么，以及绝不能变成什么。</span><em>TODO / OPEN CANVAS →</em></button></li>
+                          <li><b>视觉个性坐标</b><span>专业与温度、力量与柔和、科技与生活如何平衡？</span><em>产出：审美坐标与比例</em></li>
+                        </ol>
+                      </article>
+
+                      <article class="framework-column framework-express">
+                        <header><span>03</span><div><small>DIRECT</small><h2>创意方向</h2></div></header>
+                        <ol start="7">
+                          <li><b>情绪板与参考系</b><span>用图像建立共同审美语言与判断基准。</span><em>产出：Moodboard / Reference</em></li>
+                          <li class="framework-action is-todo"><button type="button" data-visual-open="directions"><b>多路线创意探索</b><span>以不同方向检验定位，而不是过早锁定单一风格。</span><em>TODO / OPEN CANVAS →</em></button></li>
+                          <li><b>首选艺术方向</b><span>收敛摄影、图形、排版、色彩氛围与动态感受。</span><em>产出：Art Direction Brief</em></li>
+                        </ol>
+                      </article>
+
+                      <article class="framework-column framework-activate">
+                        <header><span>04</span><div><small>VALIDATE</small><h2>验证与交接</h2></div></header>
+                        <ol start="10">
+                          <li><b>关键触点原型</b><span>在课程封面、官网、App 与传播场景中快速试用。</span><em>产出：高价值场景原型</em></li>
+                          <li><b>差异与适配验证</b><span>判断是否符合品牌、区别竞品并适配真实用户。</span><em>产出：评估记录与迭代</em></li>
+                          <li><b>识别系统交接</b><span>把确认后的方向交给视觉识别模块系统化。</span><em>下一步：Visual Identity</em></li>
+                        </ol>
+                      </article>
+                    </section>
+
+                    <section class="framework-process visual-process">
+                      <div><span>DECISION FLOW</span><h2>从研究到视觉系统</h2></div>
+                      <ol><li><b>01</b><span>品牌输入</span></li><li><b>02</b><span>视觉研究</span></li><li><b>03</b><span>定位与关键词</span></li><li><b>04</b><span>创意路线验证</span></li><li><b>05</b><span>进入识别系统</span></li></ol>
+                    </section>
+                  </div>
+                </div>
+              </section>
+
+              <section class="visual-subpanel" data-subpanel="competitor" hidden>
                 <div class="case-workspace">
                   <aside class="case-sidebar" aria-label="竞品品牌列表">
                     <div class="case-sidebar-head"><span>BRANDS</span><strong id="caseCount">08 RESULTS</strong></div>
@@ -355,6 +410,7 @@
 
               <section class="visual-subpanel" data-subpanel="keywords" hidden>
                 <div class="panel-scroll"><div class="content-frame module-page">
+                  <button class="strategy-back" type="button" data-visual-open="framework">← 返回视觉策略</button>
                   <header class="module-header"><div><span>03.2 / VISUAL KEYWORDS</span><h1>视觉关键词</h1></div><p>把竞品研究结论转译成可操作的审美坐标和设计判断。</p></header>
                   <div class="empty-canvas canvas-green"><div class="empty-art" aria-hidden="true"><i></i><i></i><i></i><b>3.2</b></div><div class="empty-copy"><span>EMPTY CANVAS / 待设计</span><h2>竞品研究完成后进入本阶段</h2><p>这里将定义 Momcozy 学院独有的视觉语义。</p></div><ul class="plan-list"><li>视觉关键词与反关键词</li><li>情绪板与参考系</li><li>专业感与温度的比例</li><li>差异化设计原则</li></ul></div>
                 </div></div>
@@ -362,6 +418,7 @@
 
               <section class="visual-subpanel" data-subpanel="directions" hidden>
                 <div class="panel-scroll"><div class="content-frame module-page">
+                  <button class="strategy-back" type="button" data-visual-open="framework">← 返回视觉策略</button>
                   <header class="module-header"><div><span>03.3 / CREATIVE DIRECTIONS</span><h1>创意路线</h1></div><p>以多条视觉路线验证定位，再收敛为正式系统。</p></header>
                   <div class="empty-canvas canvas-orange"><div class="empty-art" aria-hidden="true"><i></i><i></i><i></i><b>3.3</b></div><div class="empty-copy"><span>EMPTY CANVAS / 待设计</span><h2>尚未形成创意提案</h2><p>视觉关键词确认后，在此对比不同创意方向。</p></div><ul class="plan-list"><li>路线 A：温暖专业</li><li>路线 B：生活方式编辑感</li><li>路线 C：数字健康平台感</li><li>评估标准与收敛结论</li></ul></div>
                 </div></div>

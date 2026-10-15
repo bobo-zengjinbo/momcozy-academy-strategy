@@ -11,6 +11,7 @@ const views = {
 };
 
 const visualViews = {
+  framework: '策略框架',
   competitor: '竞品案例',
   matrix: '对比矩阵',
   opportunity: '机会判断',
@@ -188,6 +189,7 @@ const strategyTabs = [...document.querySelectorAll('[data-strategy-subtab]')];
 const strategyPanels = [...document.querySelectorAll('[data-strategy-subpanel]')];
 const viewTitle = document.querySelector('#viewTitle');
 const caseTools = document.querySelector('#caseTools');
+const visualDetailNav = document.querySelector('#visualDetailNav');
 const caseSearch = document.querySelector('#caseSearch');
 const filters = [...document.querySelectorAll('.filter')];
 const caseNav = document.querySelector('#caseNav');
@@ -199,7 +201,7 @@ const modalTitle = document.querySelector('#modalTitle');
 const modalClose = modal.querySelector('.modal-close');
 
 let activeView = 'home';
-let activeVisualView = 'competitor';
+let activeVisualView = 'framework';
 let activeStrategyView = 'handoff';
 let activeFilter = 'all';
 let activeCaseId = cases[0].id;
@@ -253,7 +255,7 @@ function setStrategyTab(name) {
 }
 
 function setVisualTab(name) {
-  if (!visualViews[name]) name = 'competitor';
+  if (!visualViews[name]) name = 'framework';
   activeVisualView = name;
 
   subTabs.forEach((tab) => {
@@ -267,6 +269,8 @@ function setVisualTab(name) {
     panel.hidden = !isActive;
     panel.classList.toggle('is-active', isActive);
   });
+
+  visualDetailNav.hidden = !['competitor', 'matrix', 'opportunity'].includes(name);
 
   if (activeView === 'visual') {
     viewTitle.textContent = `${views.visual} / ${visualViews[name]}`;
@@ -352,6 +356,10 @@ subTabs.forEach((tab) => {
 
 strategyTabs.forEach((tab) => {
   tab.addEventListener('click', () => setStrategyTab(tab.dataset.strategySubtab));
+});
+
+document.querySelectorAll('[data-visual-open]').forEach((control) => {
+  control.addEventListener('click', () => setVisualTab(control.dataset.visualOpen));
 });
 
 document.querySelectorAll('[data-strategy-open]').forEach((control) => {
