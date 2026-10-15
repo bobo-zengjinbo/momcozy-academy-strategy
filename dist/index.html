@@ -97,8 +97,8 @@
                   <div><h3>战略承接</h3><p>业务目标、课程地图、合作机制与设计输入。</p></div><b>OPEN →</b>
                 </button>
                 <button class="workstream-card card-purple" data-open-tab="brand">
-                  <span class="workstream-no">02</span><span class="status-badge status-source">SOURCE SYNTHESIS</span>
-                  <div><h3>品牌策略</h3><p>品牌架构、定位底座与语言线索已从内容规划提炼。</p></div><b>OPEN →</b>
+                  <span class="workstream-no">02</span><span class="status-badge status-source">FRAMEWORK READY</span>
+                  <div><h3>品牌策略</h3><p>通用策略框架已建立；具体品牌结论等待后续制定。</p></div><b>OPEN →</b>
                 </button>
                 <button class="workstream-card card-active" data-open-tab="visual">
                   <span class="workstream-no">03</span><span class="status-badge status-live">IN PROGRESS</span>
@@ -130,101 +130,168 @@
         </section>
 
         <section class="workspace-panel" id="panel-strategy" role="tabpanel" aria-labelledby="tab-strategy" data-panel="strategy" hidden>
-          <div class="panel-scroll">
-            <div class="content-frame compact-panel">
-              <header class="panel-heading">
-                <div><span class="panel-kicker">01 / STRATEGY INPUT</span><h1>战略承接</h1></div>
-                <p>战略与内容部门定义业务问题；设计部门将它转译成品牌、视觉、体验和可复用资产。</p>
-              </header>
-              <div class="strategy-flow">
-                <a class="strategy-node strategy-node-source" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
-                  <span>UPSTREAM / STRATEGY × CONTENT</span>
-                  <div><small>SOURCE PLAN</small><h2>2027 年课程体系建设规划</h2><p>年度目标、生命周期课程、首发组合、合作机制、资源与经营规则。</p></div>
-                  <strong>OPEN SOURCE SITE ↗</strong>
-                </a>
-                <div class="flow-arrow"><span>INPUT</span><b>→</b><span>TRANSLATE</span></div>
-                <article class="strategy-node strategy-node-current">
-                  <span>CURRENT / DESIGN TEAM</span>
-                  <div><small>DESIGN OUTPUT</small><h2>学院设计策略</h2><p>品牌定位、视觉识别、内容模板、数字体验、应用验证与资产规范。</p></div>
-                  <strong>DESIGN WORKSPACE</strong>
-                </article>
-              </div>
-              <div class="responsibility-grid">
-                <article><span>战略与内容部门定义</span><ul><li>为什么建立课程体系</li><li>服务哪些生命周期问题</li><li>首发课程与定价原则</li><li>合作、资源与经营规则</li></ul></article>
-                <article><span>设计部门承接</span><ul><li>把战略转译成品牌定位</li><li>建立可扩展的视觉语言</li><li>定义内容和数字体验模板</li><li>验证关键触点与应用场景</li></ul></article>
-              </div>
+          <div class="strategy-workspace">
+            <nav class="subtab-bar" role="tablist" aria-label="战略承接子模块">
+              <button class="subtab strategy-subtab is-active" data-strategy-subtab="handoff" role="tab" aria-selected="true">部门承接</button>
+              <button class="subtab strategy-subtab" data-strategy-subtab="source-summary" role="tab" aria-selected="false">内容组品牌线索 <span>SYNTHESIS</span></button>
+            </nav>
+
+            <div class="strategy-content">
+              <section class="strategy-subpanel is-active" data-strategy-subpanel="handoff">
+                <div class="panel-scroll">
+                  <div class="content-frame compact-panel">
+                    <header class="panel-heading">
+                      <div><span class="panel-kicker">01 / STRATEGY INPUT</span><h1>战略承接</h1></div>
+                      <p>战略与内容部门定义业务问题；设计部门将它转译成品牌、视觉、体验和可复用资产。</p>
+                    </header>
+                    <div class="strategy-flow">
+                      <a class="strategy-node strategy-node-source" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
+                        <span>UPSTREAM / STRATEGY × CONTENT</span>
+                        <div><small>SOURCE PLAN</small><h2>2027 年课程体系建设规划</h2><p>年度目标、生命周期课程、首发组合、合作机制、资源与经营规则。</p></div>
+                        <strong>OPEN SOURCE SITE ↗</strong>
+                      </a>
+                      <div class="flow-arrow"><span>INPUT</span><b>→</b><span>TRANSLATE</span></div>
+                      <article class="strategy-node strategy-node-current">
+                        <span>CURRENT / DESIGN TEAM</span>
+                        <div><small>DESIGN OUTPUT</small><h2>学院设计策略</h2><p>品牌定位、视觉识别、内容模板、数字体验、应用验证与资产规范。</p></div>
+                        <strong>DESIGN WORKSPACE</strong>
+                      </article>
+                    </div>
+                    <div class="responsibility-grid">
+                      <article><span>战略与内容部门定义</span><ul><li>为什么建立课程体系</li><li>服务哪些生命周期问题</li><li>首发课程与定价原则</li><li>合作、资源与经营规则</li></ul></article>
+                      <article><span>设计部门承接</span><ul><li>把战略转译成品牌定位</li><li>建立可扩展的视觉语言</li><li>定义内容和数字体验模板</li><li>验证关键触点与应用场景</li></ul></article>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="strategy-subpanel" data-strategy-subpanel="source-summary" hidden>
+                <div class="panel-scroll">
+                  <div class="content-frame module-page brand-page source-summary-page">
+                    <header class="module-header"><div><span>01.2 / CONTENT TEAM SYNTHESIS</span><h1>品牌线索摘要</h1></div><p>这里不是设计部门制定的品牌策略，而是对内容组现有规划中品牌相关信息的归纳，作为后续品牌工作的输入。</p></header>
+
+                    <a class="brand-source-note" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
+                      <span><b>SOURCE SYNTHESIS</b> 来源：战略与内容部门《2027 年课程体系建设规划 V6.1》</span>
+                      <strong>OPEN SOURCE ↗</strong>
+                    </a>
+
+                    <section class="brand-thesis">
+                      <div class="brand-thesis-copy">
+                        <span class="brand-label label-source">内容组信息提炼</span>
+                        <p class="brand-eyebrow">STRATEGIC SIGNAL / 战略线索</p>
+                        <h2>从好硬件，走向陪伴妈妈持续行动的专业服务。</h2>
+                        <p>面向北美英语妈妈，以产后恢复为首发场景，用可信课程、短时计划和专家合作，把 Momcozy 对妈妈需求的理解延伸到全生命周期。</p>
+                      </div>
+                      <dl class="brand-facts">
+                        <div><dt>规划角色</dt><dd>独立课程子品牌</dd></div>
+                        <div><dt>核心人群</dt><dd>北美英语妈妈</dd></div>
+                        <div><dt>首发切口</dt><dd>产后恢复</dd></div>
+                        <div><dt>长期范围</dt><dd>妈妈全生命周期</dd></div>
+                      </dl>
+                    </section>
+
+                    <section class="brand-section">
+                      <header><div><span>01 / ARCHITECTURE SIGNAL</span><h2>规划中的品牌关系</h2></div><p>内容组建议独立发展课程子品牌，同时连接母品牌资源和专家信任。</p></header>
+                      <div class="brand-architecture">
+                        <article><small>01 / OWN</small><h3>学院课程子品牌</h3><p>统一课程体系、命名、学习路径、视觉与体验标准，建立长期课程关系。</p></article>
+                        <b>＋</b>
+                        <article><small>02 / ENDORSE</small><h3>Momcozy 母品牌</h3><p>提供用户基础、硬件触点、渠道资源、会员权益和品牌信任。</p></article>
+                        <b>＋</b>
+                        <article><small>03 / CO-BRAND</small><h3>专家 / IP 联名</h3><p>提供专业内容、审核与人物信任，帮助首期快速建立可信度。</p></article>
+                      </div>
+                    </section>
+
+                    <section class="brand-section">
+                      <header><div><span>02 / EXPERIENCE SIGNAL</span><h2>可转化的体验原则</h2></div><p>以下不是最终品牌价值，而是内容规划反复出现、值得进入策略阶段验证的方向。</p></header>
+                      <div class="brand-values">
+                        <article><span>01</span><h3>专业可信</h3><p>专家合作、专业审核、适用说明与风险提示成为体验的一部分。</p></article>
+                        <article><span>02</span><h3>妈妈优先</h3><p>不把妈妈简化为照护者，关注她自己的身体、时间与长期健康。</p></article>
+                        <article><span>03</span><h3>真实可坚持</h3><p>用 10–15 分钟内容、短版替代和断点续练适配碎片化生活。</p></article>
+                        <article><span>04</span><h3>鼓励不焦虑</h3><p>不默认用减脂、恢复速度和身体焦虑驱动行动与转化。</p></article>
+                      </div>
+                    </section>
+
+                    <section class="brand-language-grid">
+                      <article class="brand-language">
+                        <span class="brand-label label-source">内容组已提出</span>
+                        <p class="brand-eyebrow">MESSAGE SIGNAL / 语言线索</p>
+                        <blockquote>“做妈妈，<br />更做自己。”</blockquote>
+                        <div class="message-lines">
+                          <p><b>Campaign</b> 是日常生活，也是你的练习场。</p>
+                          <p><b>15 分钟母题</b> 给世界 23 小时 45 分，这 15 分钟留给自己。</p>
+                          <p><b>品牌态度</b> 身体的伟大，重新出发。</p>
+                        </div>
+                      </article>
+                      <article class="brand-boundaries">
+                        <span class="brand-label label-source">内容组已明确</span>
+                        <p class="brand-eyebrow">BOUNDARIES / 内容边界</p>
+                        <ul>
+                          <li><b>服务范围</b><span>课程属于一般训练与教育，不做诊断、治疗或康复处方。</span></li>
+                          <li><b>价值表达</b><span>不把完课率写成医疗疗效，不默认制造身体焦虑。</span></li>
+                          <li><b>产品原则</b><span>基础硬件功能保持免费，只对新增课程与服务价值收费。</span></li>
+                          <li><b>风险隔离</b><span>健康内容以独立子品牌承接，专业审核和权利链完整后再上线。</span></li>
+                        </ul>
+                      </article>
+                    </section>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </section>
 
         <section class="workspace-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand" data-panel="brand" hidden>
           <div class="panel-scroll">
-            <div class="content-frame module-page brand-page">
-              <header class="module-header"><div><span>02 / BRAND STRATEGY</span><h1>品牌策略</h1></div><p>内容组没有单列完整的品牌手册，但已经提供了品牌角色、服务对象、价值方向和表达线索。以下为设计部门的结构化提炼。</p></header>
+            <div class="content-frame module-page framework-page">
+              <header class="module-header"><div><span>02 / BRAND STRATEGY FRAMEWORK</span><h1>品牌策略</h1></div><p>本页暂不预设 Momcozy 学院的品牌答案，而是定义一套通用、可执行的策略结构，后续逐项研究、讨论、验证和确认。</p></header>
 
-              <a class="brand-source-note" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
-                <span><b>SOURCE SYNTHESIS</b> 来源：战略与内容部门《2027 年课程体系建设规划 V6.1》</span>
-                <strong>OPEN SOURCE ↗</strong>
-              </a>
+              <div class="framework-status">
+                <div><span>FRAMEWORK ONLY</span><strong>策略框架已建立，具体内容待制定</strong></div>
+                <div class="framework-progress"><i></i><span>0 / 13 已确认</span></div>
+              </div>
 
-              <section class="brand-thesis">
-                <div class="brand-thesis-copy">
-                  <span class="brand-label label-source">内容组已明确</span>
-                  <p class="brand-eyebrow">POSITIONING DRAFT / 定位提炼</p>
-                  <h2>从好硬件，走向陪伴妈妈持续行动的专业服务。</h2>
-                  <p>面向北美英语妈妈，以产后恢复为首发场景，用可信课程、短时计划和专家合作，把 Momcozy 对妈妈需求的理解延伸到全生命周期。</p>
-                </div>
-                <dl class="brand-facts">
-                  <div><dt>品牌角色</dt><dd>独立课程子品牌</dd></div>
-                  <div><dt>核心人群</dt><dd>北美英语妈妈</dd></div>
-                  <div><dt>首发切口</dt><dd>产后恢复</dd></div>
-                  <div><dt>长期范围</dt><dd>妈妈全生命周期</dd></div>
-                </dl>
-              </section>
-
-              <section class="brand-section">
-                <header><div><span>01 / ARCHITECTURE</span><h2>品牌架构</h2></div><p>独立建立专业感，同时借用母品牌信任和专家影响力。</p></header>
-                <div class="brand-architecture">
-                  <article><small>01 / OWN</small><h3>学院课程子品牌</h3><p>统一课程体系、命名、学习路径、视觉与体验标准，建立长期课程关系。</p></article>
-                  <b>＋</b>
-                  <article><small>02 / ENDORSE</small><h3>Momcozy 母品牌</h3><p>提供用户基础、硬件触点、渠道资源、会员权益和品牌信任。</p></article>
-                  <b>＋</b>
-                  <article><small>03 / CO-BRAND</small><h3>专家 / IP 联名</h3><p>提供专业内容、审核与人物信任，帮助首期快速建立可信度。</p></article>
-                </div>
-              </section>
-
-              <section class="brand-section">
-                <header><div><span>02 / VALUE SYSTEM</span><h2>品牌价值</h2></div><p>这是从用户问题、产品机制与专业边界中提取的四个核心原则。</p></header>
-                <div class="brand-values">
-                  <article><span>01</span><h3>专业可信</h3><p>专家合作、专业审核、适用说明与风险提示必须成为品牌体验的一部分。</p></article>
-                  <article><span>02</span><h3>妈妈优先</h3><p>不把妈妈简化为照护者；支持她重新关注自己的身体、时间与长期健康。</p></article>
-                  <article><span>03</span><h3>真实可坚持</h3><p>适配碎片化生活，以 10–15 分钟内容、短版替代和断点续练降低开始门槛。</p></article>
-                  <article><span>04</span><h3>鼓励不焦虑</h3><p>不默认使用减脂、恢复速度和身体焦虑驱动转化，以进步和自我感受为中心。</p></article>
-                </div>
-              </section>
-
-              <section class="brand-language-grid">
-                <article class="brand-language">
-                  <span class="brand-label label-source">内容组已提出</span>
-                  <p class="brand-eyebrow">MESSAGE TERRITORY / 语言资产</p>
-                  <blockquote>“做妈妈，<br />更做自己。”</blockquote>
-                  <div class="message-lines">
-                    <p><b>Campaign</b> 是日常生活，也是你的练习场。</p>
-                    <p><b>15 分钟母题</b> 给世界 23 小时 45 分，这 15 分钟留给自己。</p>
-                    <p><b>品牌态度</b> 身体的伟大，重新出发。</p>
-                  </div>
+              <section class="framework-map" aria-label="品牌策略通用框架">
+                <article class="framework-column framework-discover">
+                  <header><span>01</span><div><small>DISCOVER</small><h2>洞察与诊断</h2></div></header>
+                  <ol>
+                    <li><b>业务角色与目标</b><span>品牌为什么存在，要解决什么业务问题？</span><em>产出：目标与成功标准</em></li>
+                    <li><b>受众与需求洞察</b><span>核心用户是谁，处于什么情境，真正需要什么？</span><em>产出：人群、场景、张力</em></li>
+                    <li><b>品类与竞品格局</b><span>用户如何理解这个品类，市场上有哪些位置？</span><em>产出：机会地图与差异空间</em></li>
+                  </ol>
                 </article>
-                <article class="brand-boundaries">
-                  <span class="brand-label label-design">设计部门待补齐</span>
-                  <p class="brand-eyebrow">OPEN DECISIONS / 待定义</p>
-                  <ul>
-                    <li><b>正式命名</b><span>“Momcozy 学院”目前是项目工作名，子品牌命名尚未确认。</span></li>
-                    <li><b>品牌个性</b><span>专业、温暖、坚定之间的明确比例。</span></li>
-                    <li><b>中英语言</b><span>英文主张、语气规则、禁用表达与本地化标准。</span></li>
-                    <li><b>母子关系</b><span>Logo 锁定、命名露出、专家联名的层级规范。</span></li>
-                    <li><b>承诺边界</b><span>一般训练与教育，不做诊断、治疗或医疗效果承诺。</span></li>
-                  </ul>
+
+                <article class="framework-column framework-define">
+                  <header><span>02</span><div><small>DEFINE</small><h2>核心定义</h2></div></header>
+                  <ol start="4">
+                    <li><b>愿景、使命与目的</b><span>长期想改变什么，今天承担什么责任？</span><em>产出：Purpose / Vision / Mission</em></li>
+                    <li><b>品牌定位</b><span>为谁、在哪个品类、提供什么独特价值？</span><em>产出：定位陈述与机会坐标</em></li>
+                    <li><b>价值主张与承诺</b><span>用户为什么选择并相信我们？</span><em>产出：价值主张、RTB、品牌承诺</em></li>
+                    <li><b>核心价值与原则</b><span>哪些信念持续指导产品和团队决策？</span><em>产出：价值观与决策原则</em></li>
+                  </ol>
                 </article>
+
+                <article class="framework-column framework-express">
+                  <header><span>03</span><div><small>EXPRESS</small><h2>品牌表达</h2></div></header>
+                  <ol start="8">
+                    <li><b>品牌架构与命名</b><span>母子品牌、产品、专家和系列如何组织？</span><em>产出：架构、命名与背书规则</em></li>
+                    <li><b>品牌个性</b><span>如果品牌是一个人，稳定表现出什么性格？</span><em>产出：人格特征与行为边界</em></li>
+                    <li><b>语言与信息体系</b><span>说什么、怎么说、不同场景先说什么？</span><em>产出：主张、信息层级、Tone of Voice</em></li>
+                  </ol>
+                </article>
+
+                <article class="framework-column framework-activate">
+                  <header><span>04</span><div><small>ACTIVATE</small><h2>体验与治理</h2></div></header>
+                  <ol start="11">
+                    <li><b>品牌体验原则</b><span>策略如何转化为产品、内容和服务体验？</span><em>产出：关键旅程与体验原则</em></li>
+                    <li><b>视觉策略方向</b><span>品牌需要被看见、记住并区别为什么样子？</span><em>产出：视觉关键词与创意方向</em></li>
+                    <li><b>落地、治理与衡量</b><span>如何保持一致，并判断品牌是否有效？</span><em>产出：路线图、规范、指标与负责人</em></li>
+                  </ol>
+                </article>
+              </section>
+
+              <section class="framework-process">
+                <div><span>NEXT STEP</span><h2>建议制定流程</h2></div>
+                <ol><li><b>01</b><span>整理输入</span></li><li><b>02</b><span>用户与竞品研究</span></li><li><b>03</b><span>跨部门工作坊</span></li><li><b>04</b><span>形成策略草案</span></li><li><b>05</b><span>概念验证与定稿</span></li></ol>
               </section>
             </div>
           </div>

@@ -18,6 +18,11 @@ const visualViews = {
   directions: '创意路线',
 };
 
+const strategyViews = {
+  handoff: '部门承接',
+  'source-summary': '内容组品牌线索',
+};
+
 const legacyHashes = {
   top: 'home',
   overview: 'home',
@@ -179,6 +184,8 @@ const tabs = [...document.querySelectorAll('[data-tab]')];
 const panels = [...document.querySelectorAll('[data-panel]')];
 const subTabs = [...document.querySelectorAll('[data-subtab]')];
 const subPanels = [...document.querySelectorAll('[data-subpanel]')];
+const strategyTabs = [...document.querySelectorAll('[data-strategy-subtab]')];
+const strategyPanels = [...document.querySelectorAll('[data-strategy-subpanel]')];
 const viewTitle = document.querySelector('#viewTitle');
 const caseTools = document.querySelector('#caseTools');
 const caseSearch = document.querySelector('#caseSearch');
@@ -193,6 +200,7 @@ const modalClose = modal.querySelector('.modal-close');
 
 let activeView = 'home';
 let activeVisualView = 'competitor';
+let activeStrategyView = 'handoff';
 let activeFilter = 'all';
 let activeCaseId = cases[0].id;
 let query = '';
@@ -214,11 +222,34 @@ function setTab(name, updateUrl = true) {
     panel.classList.toggle('is-active', isActive);
   });
 
-  viewTitle.textContent = name === 'visual' ? `${views[name]} / ${visualViews[activeVisualView]}` : views[name];
+  if (name === 'visual') viewTitle.textContent = `${views[name]} / ${visualViews[activeVisualView]}`;
+  else if (name === 'strategy') viewTitle.textContent = `${views[name]} / ${strategyViews[activeStrategyView]}`;
+  else viewTitle.textContent = views[name];
   caseTools.hidden = !(name === 'visual' && activeVisualView === 'competitor');
   if (name === 'visual' && activeVisualView === 'competitor') renderCases();
 
   if (updateUrl) history.replaceState(null, '', `#${name}`);
+}
+
+function setStrategyTab(name) {
+  if (!strategyViews[name]) name = 'handoff';
+  activeStrategyView = name;
+
+  strategyTabs.forEach((tab) => {
+    const isActive = tab.dataset.strategySubtab === name;
+    tab.classList.toggle('is-active', isActive);
+    tab.setAttribute('aria-selected', String(isActive));
+  });
+
+  strategyPanels.forEach((panel) => {
+    const isActive = panel.dataset.strategySubpanel === name;
+    panel.hidden = !isActive;
+    panel.classList.toggle('is-active', isActive);
+  });
+
+  if (activeView === 'strategy') {
+    viewTitle.textContent = `${views.strategy} / ${strategyViews[name]}`;
+  }
 }
 
 function setVisualTab(name) {
@@ -319,6 +350,10 @@ subTabs.forEach((tab) => {
   tab.addEventListener('click', () => setVisualTab(tab.dataset.subtab));
 });
 
+strategyTabs.forEach((tab) => {
+  tab.addEventListener('click', () => setStrategyTab(tab.dataset.strategySubtab));
+});
+
 document.querySelectorAll('[data-open-tab]').forEach((control) => {
   control.addEventListener('click', (event) => {
     event.preventDefault();
@@ -383,5 +418,6 @@ if (initialHash === 'matrix') activeVisualView = 'matrix';
 if (initialHash === 'opportunity') activeVisualView = 'opportunity';
 if (initialHash === 'cases' || initialHash === 'landscape') activeVisualView = 'competitor';
 setVisualTab(activeVisualView);
+setStrategyTab(activeStrategyView);
 setTab((legacyHashes[initialHash] ?? initialHash) || 'home', false);
 renderCases();
