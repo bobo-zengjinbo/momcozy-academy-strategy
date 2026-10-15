@@ -1,18 +1,31 @@
 const views = {
-  overview: '设计策略总览',
-  strategy: '战略源站与职责',
-  cases: '视觉竞品案例',
-  matrix: '横向能力矩阵',
-  opportunity: 'Momcozy 设计机会',
+  home: 'Momcozy 学院设计策略 / 首页',
+  strategy: 'Momcozy 学院设计策略 / 战略承接',
+  brand: 'Momcozy 学院设计策略 / 品牌策略',
+  visual: 'Momcozy 学院设计策略 / 视觉策略',
+  identity: 'Momcozy 学院设计策略 / 视觉识别',
+  content: 'Momcozy 学院设计策略 / 内容系统',
+  digital: 'Momcozy 学院设计策略 / 数字体验',
+  applications: 'Momcozy 学院设计策略 / 应用验证',
+  assets: 'Momcozy 学院设计策略 / 资产规范',
+};
+
+const visualViews = {
+  competitor: '竞品案例',
+  matrix: '对比矩阵',
+  opportunity: '机会判断',
+  keywords: '视觉关键词',
+  directions: '创意路线',
 };
 
 const legacyHashes = {
-  top: 'overview',
+  top: 'home',
+  overview: 'home',
   'source-strategy': 'strategy',
-  landscape: 'overview',
-  cases: 'cases',
-  matrix: 'matrix',
-  opportunity: 'opportunity',
+  landscape: 'visual',
+  cases: 'visual',
+  matrix: 'visual',
+  opportunity: 'visual',
 };
 
 const cases = [
@@ -164,6 +177,8 @@ const cases = [
 
 const tabs = [...document.querySelectorAll('[data-tab]')];
 const panels = [...document.querySelectorAll('[data-panel]')];
+const subTabs = [...document.querySelectorAll('[data-subtab]')];
+const subPanels = [...document.querySelectorAll('[data-subpanel]')];
 const viewTitle = document.querySelector('#viewTitle');
 const caseTools = document.querySelector('#caseTools');
 const caseSearch = document.querySelector('#caseSearch');
@@ -176,13 +191,14 @@ const modalImage = modal.querySelector('img');
 const modalTitle = document.querySelector('#modalTitle');
 const modalClose = modal.querySelector('.modal-close');
 
-let activeView = 'overview';
+let activeView = 'home';
+let activeVisualView = 'competitor';
 let activeFilter = 'all';
 let activeCaseId = cases[0].id;
 let query = '';
 
 function setTab(name, updateUrl = true) {
-  if (!views[name]) name = 'overview';
+  if (!views[name]) name = 'home';
   activeView = name;
 
   tabs.forEach((tab) => {
@@ -198,11 +214,34 @@ function setTab(name, updateUrl = true) {
     panel.classList.toggle('is-active', isActive);
   });
 
-  viewTitle.textContent = views[name];
-  caseTools.hidden = name !== 'cases';
-  if (name === 'cases') renderCases();
+  viewTitle.textContent = name === 'visual' ? `${views[name]} / ${visualViews[activeVisualView]}` : views[name];
+  caseTools.hidden = !(name === 'visual' && activeVisualView === 'competitor');
+  if (name === 'visual' && activeVisualView === 'competitor') renderCases();
 
   if (updateUrl) history.replaceState(null, '', `#${name}`);
+}
+
+function setVisualTab(name) {
+  if (!visualViews[name]) name = 'competitor';
+  activeVisualView = name;
+
+  subTabs.forEach((tab) => {
+    const isActive = tab.dataset.subtab === name;
+    tab.classList.toggle('is-active', isActive);
+    tab.setAttribute('aria-selected', String(isActive));
+  });
+
+  subPanels.forEach((panel) => {
+    const isActive = panel.dataset.subpanel === name;
+    panel.hidden = !isActive;
+    panel.classList.toggle('is-active', isActive);
+  });
+
+  if (activeView === 'visual') {
+    viewTitle.textContent = `${views.visual} / ${visualViews[name]}`;
+    caseTools.hidden = name !== 'competitor';
+    if (name === 'competitor') renderCases();
+  }
 }
 
 function filteredCases() {
@@ -276,6 +315,10 @@ tabs.forEach((tab, index) => {
   });
 });
 
+subTabs.forEach((tab) => {
+  tab.addEventListener('click', () => setVisualTab(tab.dataset.subtab));
+});
+
 document.querySelectorAll('[data-open-tab]').forEach((control) => {
   control.addEventListener('click', (event) => {
     event.preventDefault();
@@ -288,7 +331,8 @@ document.querySelectorAll('[data-case-open]').forEach((control) => {
     activeCaseId = control.dataset.caseOpen;
     activeFilter = 'all';
     filters.forEach((item) => item.classList.toggle('is-active', item.dataset.filter === 'all'));
-    setTab('cases');
+    setVisualTab('competitor');
+    setTab('visual');
   });
 });
 
@@ -328,9 +372,16 @@ modal.addEventListener('click', (event) => {
 
 window.addEventListener('hashchange', () => {
   const hash = location.hash.slice(1);
+  if (hash === 'matrix') setVisualTab('matrix');
+  if (hash === 'opportunity') setVisualTab('opportunity');
+  if (hash === 'cases' || hash === 'landscape') setVisualTab('competitor');
   setTab(legacyHashes[hash] ?? hash, false);
 });
 
 const initialHash = location.hash.slice(1);
-setTab(legacyHashes[initialHash] ?? initialHash ?? 'overview', false);
+if (initialHash === 'matrix') activeVisualView = 'matrix';
+if (initialHash === 'opportunity') activeVisualView = 'opportunity';
+if (initialHash === 'cases' || initialHash === 'landscape') activeVisualView = 'competitor';
+setVisualTab(activeVisualView);
+setTab((legacyHashes[initialHash] ?? initialHash) || 'home', false);
 renderCases();
