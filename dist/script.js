@@ -3,7 +3,7 @@ const views = {
   strategy: 'Momcozy 学院设计策略 / 战略承接',
   brand: 'Momcozy 学院设计策略 / 品牌策略',
   visual: 'Momcozy 学院设计策略 / 视觉策略',
-  identity: 'Momcozy 学院设计策略 / 视觉识别',
+  identity: 'Momcozy 学院设计策略 / 视觉系统',
   content: 'Momcozy 学院设计策略 / 内容系统',
   digital: 'Momcozy 学院设计策略 / 数字体验',
   applications: 'Momcozy 学院设计策略 / 应用验证',
