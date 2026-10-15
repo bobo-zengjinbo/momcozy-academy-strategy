@@ -43,19 +43,6 @@
           <strong id="viewTitle">Momcozy 学院设计策略 / 首页</strong>
         </div>
 
-        <div class="case-tools" id="caseTools" hidden>
-          <label class="search-control">
-            <span>SEARCH</span>
-            <input id="caseSearch" type="search" placeholder="搜索品牌或特征" autocomplete="off" />
-          </label>
-          <div class="filter-group" role="group" aria-label="案例类型筛选">
-            <button class="filter is-active" data-filter="all">全部 08</button>
-            <button class="filter" data-filter="direct">直接 04</button>
-            <button class="filter" data-filter="coopetition">竞合 02</button>
-            <button class="filter" data-filter="adjacent">标杆 02</button>
-          </div>
-        </div>
-
         <div class="toolbar-actions">
           <a class="tool-button" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">上游战略 ↗</a>
           <a class="tool-button tool-button-dark" href="https://github.com/bobo-zengjinbo/momcozy-academy-strategy" target="_blank" rel="noreferrer">SOURCE</a>
@@ -293,9 +280,7 @@
           <div class="visual-workspace">
             <nav class="subtab-bar visual-detail-nav" id="visualDetailNav" role="tablist" aria-label="视觉竞品分析子模块" hidden>
               <button class="detail-back" type="button" data-visual-open="framework">← 返回视觉策略</button>
-              <button class="subtab is-active" data-subtab="competitor" role="tab" aria-selected="true">竞品案例 <span>LIVE</span></button>
-              <button class="subtab" data-subtab="matrix" role="tab" aria-selected="false">对比矩阵</button>
-              <button class="subtab" data-subtab="opportunity" role="tab" aria-selected="false">机会判断</button>
+              <button class="subtab is-active" data-subtab="competitor" role="tab" aria-selected="true">Every Mother 样板 <span>LIVE</span></button>
             </nav>
 
             <div class="visual-content">
@@ -305,7 +290,7 @@
                     <header class="module-header"><div><span>03 / VISUAL STRATEGY · WHY &amp; DECISION</span><h1>视觉策略</h1></div><p>视觉策略解释“为什么要这样设计”：从品牌目标、用户语境和竞品证据中形成视觉判断、取舍与原则，为后续视觉系统提供可追溯的因果依据。</p></header>
 
                     <div class="framework-status visual-framework-status">
-                      <div><span>FRAMEWORK + RESEARCH</span><strong>结构已建立，竞品视觉研究已完成</strong></div>
+                      <div><span>FRAMEWORK + RESEARCH</span><strong>方法已建立，Every Mother 样板研究完成</strong></div>
                       <div class="framework-progress"><i></i><span>01 / 12 已完成</span></div>
                     </div>
 
@@ -315,7 +300,7 @@
                         <ol>
                           <li><b>品牌策略输入</b><span>品牌定位、价值主张和个性为视觉提供什么约束？</span><em>状态：等待品牌策略</em></li>
                           <li><b>受众与文化语境</b><span>目标人群习惯什么，又对哪些表达敏感？</span><em>产出：文化与审美洞察</em></li>
-                          <li class="framework-action"><button type="button" data-visual-open="competitor"><b>视觉竞品分析</b><span>案例、横向矩阵与机会判断已经整理完成。</span><em>OPEN RESEARCH →</em></button></li>
+                          <li class="framework-action"><button type="button" data-visual-open="competitor"><b>视觉竞品分析</b><span>先以 Every Mother 验证单品牌证据研究方法。</span><em>OPEN RESEARCH →</em></button></li>
                         </ol>
                       </article>
 
@@ -367,42 +352,9 @@
               </section>
 
               <section class="visual-subpanel" data-subpanel="competitor" hidden>
-                <div class="competitor-analysis-workspace">
-                  <nav class="module-filter-strip" id="moduleFilters" aria-label="按视觉模块筛选品牌"></nav>
-                  <div class="case-workspace">
-                    <aside class="case-sidebar" aria-label="竞品品牌列表">
-                      <div class="case-sidebar-head"><span>BRANDS</span><strong id="caseCount">08 RESULTS</strong></div>
-                      <div class="case-nav" id="caseNav"></div>
-                    </aside>
-                    <div class="case-detail-wrap"><article class="case-detail" id="caseDetail" aria-live="polite"></article></div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="visual-subpanel" data-subpanel="matrix" hidden>
-                <div class="panel-scroll">
-                  <div class="content-frame compact-panel">
-                    <header class="panel-heading"><div><span class="panel-kicker">VISUAL RESEARCH / COVERAGE</span><h1>品牌 × 10 模块</h1></div><p>矩阵仅记录公开页面证据：强证据代表已进入品牌详解，一般证据代表可观察但未作为主案例，空白代表本轮未观察。</p></header>
-                    <div class="matrix-legend" aria-label="矩阵图例"><span><i class="coverage-dot is-strong"></i>强证据</span><span><i class="coverage-dot is-general"></i>一般证据</span><span><i class="coverage-dot"></i>未观察</span></div>
-                    <div class="matrix-wrap" tabindex="0">
-                      <table id="coverageMatrix"></table>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="visual-subpanel" data-subpanel="opportunity" hidden>
-                <div class="panel-scroll opportunity-bg">
-                  <div class="content-frame compact-panel">
-                    <header class="panel-heading panel-heading-light"><div><span class="panel-kicker">VISUAL RESEARCH / OPPORTUNITY</span><h1>不是另一个产后健身品牌</h1></div><p>更合适的位置，是一个懂妈妈真实生活、能连接硬件场景、由专家共同建立的长期课程品牌。</p></header>
-                    <div class="opportunity-formula">
-                      <article><span>01</span><strong>WARM<br />EXPERTISE</strong><small>温暖的专业性</small></article>
-                      <article><span>02</span><strong>GUIDED<br />JOURNEY</strong><small>清楚的渐进路径</small></article>
-                      <article><span>03</span><strong>REAL-LIFE<br />CARE</strong><small>真实照护场景</small></article>
-                      <article><span>04</span><strong>CONNECTED<br />ECOSYSTEM</strong><small>硬件与内容连接</small></article>
-                    </div>
-                    <div class="module-insights" id="moduleInsights"></div>
-                  </div>
+                <div class="single-research-workspace">
+                  <nav class="research-section-nav" id="researchSectionNav" aria-label="研究页面目录"></nav>
+                  <div class="case-detail-wrap"><article class="case-detail single-research-detail" id="caseDetail" aria-live="polite"></article></div>
                 </div>
               </section>
 
