@@ -356,33 +356,25 @@
               </section>
 
               <section class="visual-subpanel" data-subpanel="competitor" hidden>
-                <div class="case-workspace">
-                  <aside class="case-sidebar" aria-label="竞品品牌列表">
-                    <div class="case-sidebar-head"><span>BRANDS</span><strong id="caseCount">08 RESULTS</strong></div>
-                    <div class="case-nav" id="caseNav"></div>
-                  </aside>
-                  <div class="case-detail-wrap"><article class="case-detail" id="caseDetail" aria-live="polite"></article></div>
+                <div class="competitor-analysis-workspace">
+                  <nav class="module-filter-strip" id="moduleFilters" aria-label="按视觉模块筛选品牌"></nav>
+                  <div class="case-workspace">
+                    <aside class="case-sidebar" aria-label="竞品品牌列表">
+                      <div class="case-sidebar-head"><span>BRANDS</span><strong id="caseCount">08 RESULTS</strong></div>
+                      <div class="case-nav" id="caseNav"></div>
+                    </aside>
+                    <div class="case-detail-wrap"><article class="case-detail" id="caseDetail" aria-live="polite"></article></div>
+                  </div>
                 </div>
               </section>
 
               <section class="visual-subpanel" data-subpanel="matrix" hidden>
                 <div class="panel-scroll">
                   <div class="content-frame compact-panel">
-                    <header class="panel-heading"><div><span class="panel-kicker">VISUAL RESEARCH / MATRIX</span><h1>横向比较</h1></div><p>五星表示品牌表达强度，不代表医学效果或商业表现。</p></header>
+                    <header class="panel-heading"><div><span class="panel-kicker">VISUAL RESEARCH / COVERAGE</span><h1>品牌 × 10 模块</h1></div><p>矩阵仅记录公开页面证据：强证据代表已进入品牌详解，一般证据代表可观察但未作为主案例，空白代表本轮未观察。</p></header>
+                    <div class="matrix-legend" aria-label="矩阵图例"><span><i class="coverage-dot is-strong"></i>强证据</span><span><i class="coverage-dot is-general"></i>一般证据</span><span><i class="coverage-dot"></i>未观察</span></div>
                     <div class="matrix-wrap" tabindex="0">
-                      <table>
-                        <thead><tr><th>品牌</th><th>专业可信</th><th>情绪温度</th><th>视觉识别</th><th>产品系统</th><th>内容传播</th><th>核心资产</th></tr></thead>
-                        <tbody>
-                          <tr><th>Every Mother</th><td>★★★★★</td><td>★★★☆☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>临床证据</td></tr>
-                          <tr><th>MUTU System</th><td>★★★★☆</td><td>★★★★★</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>包容语言</td></tr>
-                          <tr><th>Studio Bloom</th><td>★★★★☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★★★</td><td>★★★★☆</td><td>数字服务</td></tr>
-                          <tr><th>Get Mom Strong</th><td>★★★☆☆</td><td>★★★★☆</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★★</td><td>人格社群</td></tr>
-                          <tr><th>MamasteFit</th><td>★★★★☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★★☆</td><td>专家 IP</td></tr>
-                          <tr><th>Nourish Move Love</th><td>★★★☆☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>免费内容</td></tr>
-                          <tr><th>Expectful</th><td>★★★☆☆</td><td>★★★★★</td><td>★★★★★</td><td>★★★☆☆</td><td>★★★★★</td><td>情绪内容</td></tr>
-                          <tr><th>The Sculpt Society</th><td>★★★☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>精品审美</td></tr>
-                        </tbody>
-                      </table>
+                      <table id="coverageMatrix"></table>
                     </div>
                   </div>
                 </div>
@@ -398,12 +390,7 @@
                       <article><span>03</span><strong>REAL-LIFE<br />CARE</strong><small>真实照护场景</small></article>
                       <article><span>04</span><strong>CONNECTED<br />ECOSYSTEM</strong><small>硬件与内容连接</small></article>
                     </div>
-                    <div class="principles-grid">
-                      <article><span>PRINCIPLE 01</span><h2>专业，但不让人紧张</h2><p>用结构、专家和边界建立安全感。</p></article>
-                      <article><span>PRINCIPLE 02</span><h2>温暖，但不幼态</h2><p>强调平静、力量与包容。</p></article>
-                      <article><span>PRINCIPLE 03</span><h2>鼓励，但不制造焦虑</h2><p>围绕开始、坚持和感知进步。</p></article>
-                      <article><span>PRINCIPLE 04</span><h2>独立，但有母品牌背书</h2><p>建立独立专业语言并连接 Momcozy。</p></article>
-                    </div>
+                    <div class="module-insights" id="moduleInsights"></div>
                   </div>
                 </div>
               </section>
@@ -466,7 +453,7 @@
 
     <dialog class="image-modal" id="imageModal">
       <div class="modal-bar"><span id="modalTitle">WEBSITE SCREEN</span><button class="modal-close" type="button" aria-label="关闭大图">CLOSE ×</button></div>
-      <img src="" alt="" />
+      <img alt="" />
     </dialog>
 
     <script src="./script.js"></script>
