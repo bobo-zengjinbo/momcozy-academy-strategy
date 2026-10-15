@@ -5,473 +5,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Momcozy Academy 设计策略工作台：承接 2027 课程体系战略，持续沉淀品牌视觉研究、设计规划与落地资产。"
+      content="Momcozy Academy 设计策略工作台：承接 2027 课程体系战略，集中管理品牌研究、设计策略与落地规划。"
     />
-    <title>Momcozy Academy · Design Strategy</title>
+    <title>Momcozy Academy · Design Strategy Workspace</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <div class="app-shell">
+      <header class="app-header">
+        <a class="brand" href="#overview" data-open-tab="overview" aria-label="回到设计策略总览">
+          <span class="brand-dot"></span>
+          <span class="brand-name">MOMCOZY / ACADEMY</span>
+          <span class="product-name">DESIGN STRATEGY</span>
+        </a>
+        <div class="header-status">
+          <span class="status-dot"></span>
+          <span>WORKSPACE 01</span>
+          <span>UPDATED 2026.10</span>
+        </div>
+      </header>
 
-    <header class="site-header">
-      <a class="site-mark" href="#top" aria-label="返回顶部">
-        <span class="mark-dot"></span>
-        <span>MOMCOZY / ACADEMY / DESIGN</span>
-      </a>
-      <nav class="main-nav" aria-label="页面导航">
-        <a href="#source-strategy">战略源站</a>
-        <a href="#landscape">竞争格局</a>
-        <a href="#cases">品牌案例</a>
-        <a href="#matrix">横向比较</a>
-        <a href="#opportunity">机会判断</a>
+      <nav class="tab-bar" role="tablist" aria-label="设计策略模块">
+        <button class="tab is-active" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" data-tab="overview">
+          <span>01</span> 总览
+        </button>
+        <button class="tab" id="tab-strategy" role="tab" aria-selected="false" aria-controls="panel-strategy" data-tab="strategy">
+          <span>02</span> 战略源站
+        </button>
+        <button class="tab" id="tab-cases" role="tab" aria-selected="false" aria-controls="panel-cases" data-tab="cases">
+          <span>03</span> 竞品案例
+        </button>
+        <button class="tab" id="tab-matrix" role="tab" aria-selected="false" aria-controls="panel-matrix" data-tab="matrix">
+          <span>04</span> 对比矩阵
+        </button>
+        <button class="tab" id="tab-opportunity" role="tab" aria-selected="false" aria-controls="panel-opportunity" data-tab="opportunity">
+          <span>05</span> 设计机会
+        </button>
       </nav>
-      <div class="header-meta">DESIGN STRATEGY<br />2026.10</div>
-    </header>
 
-    <main id="top">
-      <section class="hero grid-shell">
-        <div class="hero-kicker cell-label">DESIGN STRATEGY / VISUAL STUDY 01</div>
-        <h1 class="hero-title">
-          <span>VISUAL</span>
-          <span>COMPETITIVE</span>
-          <span>REVIEW<span class="signal">.</span></span>
-        </h1>
-        <div class="hero-aside">
-          <p class="eyebrow">MOMCOZY ACADEMY</p>
-          <p class="hero-lead">
-            孕产课程、女性健康与数字内容品牌的视觉竞争分析。
-          </p>
-          <p class="hero-copy">
-            研究重点不是谁的 Logo 更漂亮，而是谁能通过视觉建立专业信任、降低行动门槛，并把课程组织成可持续的品牌体验。
-          </p>
-          <div class="hero-stats" aria-label="研究概览">
-            <div><strong>08</strong><span>品牌样本</span></div>
-            <div><strong>05</strong><span>分析维度</span></div>
-            <div><strong>01</strong><span>机会定位</span></div>
-          </div>
-        </div>
-        <div class="hero-footnote">
-          <span>SCOPE</span>
-          <span>North America / English-speaking market</span>
-          <span>Postpartum-first, lifecycle-ready</span>
-        </div>
-      </section>
-
-      <section id="source-strategy" class="source-strategy">
-        <div class="source-intro grid-shell">
-          <div class="source-index">00</div>
-          <div class="source-title">
-            <p class="eyebrow">STRATEGY SOURCE / CONTENT TEAM</p>
-            <h2>战略源站</h2>
-          </div>
-          <p class="source-summary">
-            本站是设计部门的策略与落地工作台。所有品牌视觉、体验与应用规划，均承接战略与内容部门制定的课程体系母规划。
-          </p>
+      <div class="toolbar" aria-label="当前模块工具栏">
+        <div class="toolbar-context">
+          <span class="toolbar-label">CURRENT VIEW</span>
+          <strong id="viewTitle">设计策略总览</strong>
         </div>
 
-        <div class="source-map grid-shell">
-          <a
-            class="source-card source-card-primary"
-            href="https://momcozy-course-plan-2027.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="打开 2027 年课程体系建设规划源站"
-          >
-            <span class="source-card-meta">UPSTREAM / STRATEGY × CONTENT</span>
-            <div>
-              <span class="source-card-no">01</span>
-              <h3>2027 年课程体系建设规划</h3>
-              <p>回答为什么做、做什么、如何合作，以及课程业务如何被验证。</p>
-            </div>
-            <span class="source-card-action">OPEN SOURCE SITE ↗</span>
-          </a>
-
-          <div class="source-connector" aria-hidden="true">
-            <span>INPUT</span>
-            <i>→</i>
-            <span>TRANSLATE</span>
-          </div>
-
-          <article class="source-card source-card-current">
-            <span class="source-card-meta">CURRENT / DESIGN TEAM</span>
-            <div>
-              <span class="source-card-no">02</span>
-              <h3>品牌与设计策略</h3>
-              <p>把上游战略翻译成品牌定位、视觉语言、数字体验与可执行的设计资产。</p>
-            </div>
-            <span class="source-card-action">YOU ARE HERE</span>
-          </article>
-        </div>
-
-        <div class="source-scope grid-shell" aria-label="两个网站的职责范围">
-          <div>
-            <span>战略与内容部门定义</span>
-            <p>年度目标 · 生命周期课程地图 · 首发课程 · 合作机制 · 子品牌联动 · 里程碑与经营规则</p>
-          </div>
-          <div>
-            <span>设计部门承接</span>
-            <p>品牌架构 · 视觉识别 · 竞品研究 · 内容模板 · 数字体验 · Campaign 与应用落地</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="thesis-band" aria-label="核心结论">
-        <p>多数品牌只能占住一个优势：</p>
-        <div class="ticker" aria-hidden="true">
-          <span>专业可信</span><i>×</i><span>内容人格</span><i>×</i><span>数字体验</span><i>×</i><span>生活方式</span>
-        </div>
-        <p class="thesis-result">Momcozy 的空位，是把四者组织成一个完整系统。</p>
-      </section>
-
-      <section id="landscape" class="section grid-shell">
-        <header class="section-head">
-          <div class="section-index">01</div>
-          <div>
-            <p class="eyebrow">MARKET LANDSCAPE</p>
-            <h2>竞争格局</h2>
-          </div>
-          <p class="section-summary">
-            直接竞品主要分布在“专业—生活方式”和“平台—内容 IP”两条轴线上。Momcozy 不需要复制某一个品牌，而需要找到组合优势。
-          </p>
-        </header>
-
-        <div class="landscape-layout">
-          <div class="quadrant" aria-label="竞品定位象限图">
-            <div class="axis axis-y"><span>专业 / 临床</span><span>情绪 / 生活方式</span></div>
-            <div class="axis axis-x"><span>内容 / IP</span><span>产品 / 平台</span></div>
-            <div class="axis-line axis-line-x"></div>
-            <div class="axis-line axis-line-y"></div>
-            <button class="brand-node" style="--x: 73%; --y: 23%" data-target="every-mother">Every Mother</button>
-            <button class="brand-node" style="--x: 58%; --y: 32%" data-target="mutu">MUTU</button>
-            <button class="brand-node" style="--x: 78%; --y: 43%" data-target="studio-bloom">Studio Bloom</button>
-            <button class="brand-node" style="--x: 70%; --y: 69%" data-target="get-mom-strong">Get Mom Strong</button>
-            <button class="brand-node" style="--x: 28%; --y: 30%" data-target="mamastefit">MamasteFit</button>
-            <button class="brand-node" style="--x: 21%; --y: 70%" data-target="nourish-move-love">NML</button>
-            <button class="brand-node" style="--x: 37%; --y: 82%" data-target="expectful">Expectful</button>
-            <button class="brand-node" style="--x: 83%; --y: 83%" data-target="sculpt-society">TSS Mama</button>
-            <div class="opportunity-node" style="--x: 61%; --y: 53%">
-              <span>MOMCOZY</span>
-              <small>OPPORTUNITY</small>
-            </div>
-          </div>
-
-          <div class="archetypes">
-            <article>
-              <span class="archetype-no">A</span>
-              <h3>临床专业型</h3>
-              <p>用研究、专家和问题解决建立信任。</p>
-              <small>EVERY MOTHER / MUTU</small>
-            </article>
-            <article>
-              <span class="archetype-no">B</span>
-              <h3>数字平台型</h3>
-              <p>用 App、路径、进度和服务形成长期关系。</p>
-              <small>STUDIO BLOOM</small>
-            </article>
-            <article>
-              <span class="archetype-no">C</span>
-              <h3>人格社区型</h3>
-              <p>用创始人、态度和真实故事形成认同。</p>
-              <small>GET MOM STRONG</small>
-            </article>
-            <article>
-              <span class="archetype-no">D</span>
-              <h3>内容流量型</h3>
-              <p>用免费计划、搜索和持续内容扩大入口。</p>
-              <small>NML / EXPECTFUL</small>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="insight-strip">
-        <article><span>01</span><p>专业证据必须被“设计出来”，而不是藏在免责声明里。</p></article>
-        <article><span>02</span><p>“每天 10–15 分钟”比抽象的关怀更能降低行动门槛。</p></article>
-        <article><span>03</span><p>真实身体与真实生活，是孕产品牌最重要的视觉资产。</p></article>
-        <article><span>04</span><p>用户先需要知道从哪里开始，之后才关心有多少课程。</p></article>
-      </section>
-
-      <section id="cases" class="section cases-section">
-        <header class="section-head grid-shell">
-          <div class="section-index">02</div>
-          <div>
-            <p class="eyebrow">CASE STUDIES</p>
-            <h2>重点品牌案例</h2>
-          </div>
-          <div class="filters" role="group" aria-label="筛选品牌案例">
+        <div class="case-tools" id="caseTools" hidden>
+          <label class="search-control">
+            <span>SEARCH</span>
+            <input id="caseSearch" type="search" placeholder="搜索品牌或特征" autocomplete="off" />
+          </label>
+          <div class="filter-group" role="group" aria-label="案例类型筛选">
             <button class="filter is-active" data-filter="all">全部 08</button>
-            <button class="filter" data-filter="direct">直接竞品 04</button>
-            <button class="filter" data-filter="coopetition">竞合对象 02</button>
-            <button class="filter" data-filter="adjacent">相邻标杆 02</button>
-          </div>
-        </header>
-
-        <div class="case-list">
-          <article id="every-mother" class="case-card" data-category="direct">
-            <div class="case-number">01</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/every-mother.jpg" data-alt="Every Mother 官网首页截图">
-                <img src="./assets/competitors/every-mother.jpg" alt="Every Mother 官网首页截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://every-mother.com/" target="_blank" rel="noreferrer">every-mother.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>DIRECT</span><span>CLINICAL</span><span>PLATFORM</span></div>
-              <h3>Every Mother</h3>
-              <p class="case-thesis">专业可信感最完整：把临床证据做成品牌的第一视觉层。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>大留白、深墨绿、编辑感衬线字体，接近高端数字健康服务。</dd></div>
-                <div><dt>关键机制</dt><dd>按症状与阶段进入，Quiz 先于课程货架；研究、医学顾问与媒体背书被前置。</dd></div>
-                <div><dt>边界风险</dt><dd>可信但略有距离感，生活情绪与真实照护场景较弱。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>证据结构、专家身份、问题入口，以及“短时可完成”的产品承诺。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="mutu" class="case-card" data-category="direct">
-            <div class="case-number">02</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/mutu-micro.jpg" data-alt="MUTU System 官网首页截图">
-                <img src="./assets/competitors/mutu-micro.jpg" alt="MUTU System 官网首页截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://mutusystem.com/en-us/" target="_blank" rel="noreferrer">mutusystem.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>DIRECT</span><span>INCLUSIVE</span><span>LIFECYCLE</span></div>
-              <h3>MUTU System</h3>
-              <p class="case-thesis">品牌语言最有立场：让女性先感到“被理解”，再接受专业方案。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>深紫、珊瑚橙、青绿形成高识别；不同年龄、肤色与身体状态同框。</dd></div>
-                <div><dt>关键机制</dt><dd>从身体感受进入，以 Foundation / Build / Sustain 建立渐进路径，并用 12 分钟降低门槛。</dd></div>
-                <div><dt>边界风险</dt><dd>营销文字和效果数据密度高，容易接近过度承诺。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>包容性摄影、跨年龄表达，以及“现在开始也不晚”的长期陪伴语言。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="studio-bloom" class="case-card" data-category="direct">
-            <div class="case-number">03</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/studio-bloom.jpg" data-alt="The Bloom Method 官网首页截图">
-                <img src="./assets/competitors/studio-bloom.jpg" alt="The Bloom Method 官网首页截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://www.thebloommethod.com/" target="_blank" rel="noreferrer">thebloommethod.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>DIRECT</span><span>APP</span><span>COACHING</span></div>
-              <h3>The Bloom Method</h3>
-              <p class="case-thesis">数字产品呈现最完整：课程之外，明确展示路径、进度、社区和教练服务。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>黑白结构、高对比字体与活力粉色，强调训练动作和即时行动。</dd></div>
-                <div><dt>关键机制</dt><dd>TTC、孕期、产后形成连续阶段；App 界面、日历和一对一支持构成价值证据。</dd></div>
-                <div><dt>边界风险</dt><dd>传统健身气质偏强，“快速恢复”式话语不适合直接复制。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>将数字体验本身视觉化：先让用户看见如何使用，再解释课程数量。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="get-mom-strong" class="case-card" data-category="direct">
-            <div class="case-number">04</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/get-mom-strong.jpg" data-alt="Get Mom Strong 官网首页截图">
-                <img src="./assets/competitors/get-mom-strong.jpg" alt="Get Mom Strong 官网首页截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://getmomstrong.com/" target="_blank" rel="noreferrer">getmomstrong.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>DIRECT</span><span>PERSONALITY</span><span>COMMUNITY</span></div>
-              <h3>Get Mom Strong</h3>
-              <p class="case-thesis">态度与社群最鲜明：从“变小”转向“变强”，建立妈妈运动身份。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>粗体大字、高饱和玫红、真实家庭训练视频，直接、有能量。</dd></div>
-                <div><dt>关键机制</dt><dd>创始人经历、SLAM 命名、进阶课程和大量真实反馈共同建立社群身份。</dd></div>
-                <div><dt>边界风险</dt><dd>健身压迫感较强，依赖创始人人格，对产后早期用户不够柔和。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>“重新获得力量”的价值观，以及不以减重为默认目标的内容立场。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="mamastefit" class="case-card" data-category="coopetition">
-            <div class="case-number">05</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/mamastefit.jpg" data-alt="MamasteFit 官网首页截图">
-                <img src="./assets/competitors/mamastefit.jpg" alt="MamasteFit 官网首页截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://mamastefit.com/" target="_blank" rel="noreferrer">mamastefit.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>COOPETITION</span><span>EXPERT IP</span><span>COURSE COMMERCE</span></div>
-              <h3>MamasteFit</h3>
-              <p class="case-thesis">专家 IP 商品化的代表：把专业身份、真实母亲经验和课程交易结合。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>柔和紫色、暖调摄影、编辑式大标题；专家本人持续成为主画面。</dd></div>
-                <div><dt>关键机制</dt><dd>教育课、训练计划、Bundle、Podcast 和专业认证形成多层产品矩阵。</dd></div>
-                <div><dt>边界风险</dt><dd>课程与系统入口较分散，品牌包装一致性仍有提升空间。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>专家联名与课程包装；Momcozy 应用自己的学习体验统一承接内容。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="nourish-move-love" class="case-card" data-category="coopetition">
-            <div class="case-number">06</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/nourish-move-love-micro.jpg" data-alt="Nourish Move Love 产后计划页面截图">
-                <img src="./assets/competitors/nourish-move-love-micro.jpg" alt="Nourish Move Love 产后计划页面截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://www.nourishmovelove.com/postpartum-workout-plans/" target="_blank" rel="noreferrer">nourishmovelove.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>COOPETITION</span><span>FREE CONTENT</span><span>SEO</span></div>
-              <h3>Nourish Move Love</h3>
-              <p class="case-thesis">免费内容获客效率最高：让计划本身成为可保存、可搜索、可分享的入口。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>功能优先的内容网站结构，醒目标题、日历、缩略图和平台色共同服务点击。</dd></div>
-                <div><dt>关键机制</dt><dd>免费计划＋视频＋PDF 日历＋搜索内容，持续把单次访问转成跟练行为。</dd></div>
-                <div><dt>边界风险</dt><dd>信息分散、付费价值较难建立，品牌高级感和统一学习体验较弱。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>样课、挑战日历、内容切片和搜索型落地页，但需要由统一品牌系统承接。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="expectful" class="case-card" data-category="adjacent">
-            <div class="case-number">07</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/expectful.jpg" data-alt="Expectful 官网首页截图">
-                <img src="./assets/competitors/expectful.jpg" alt="Expectful 官网首页截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://expectful.com/" target="_blank" rel="noreferrer">expectful.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>ADJACENT</span><span>EDITORIAL</span><span>EMOTIONAL CARE</span></div>
-              <h3>Expectful</h3>
-              <p class="case-thesis">情绪语言最成熟：把复杂、真实甚至不完美的母职体验放在内容中心。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>渐变色、优雅衬线字体、杂志式图片编排，兼具情绪温度和现代编辑感。</dd></div>
-                <div><dt>关键机制</dt><dd>从 TTC 到产后，以专家内容、第一人称故事和冥想资源组织生命周期。</dd></div>
-                <div><dt>边界风险</dt><dd>内容媒体属性强，具体课程路径和产品价值不够可视化。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>敏感场景语言、情绪包容性，以及在母品牌体系下保持独立声音。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article id="sculpt-society" class="case-card" data-category="adjacent">
-            <div class="case-number">08</div>
-            <div class="screen-card">
-              <button class="image-button" data-image="./assets/competitors/sculpt-society.jpg" data-alt="The Sculpt Society Mama 页面截图">
-                <img src="./assets/competitors/sculpt-society.jpg" alt="The Sculpt Society Mama 页面截图" loading="lazy" />
-                <span>VIEW SCREEN</span>
-              </button>
-              <a class="site-link" href="https://thesculptsociety.com/pages/tss-mama-program" target="_blank" rel="noreferrer">thesculptsociety.com <span>↗</span></a>
-            </div>
-            <div class="case-copy">
-              <div class="case-tags"><span>ADJACENT</span><span>PREMIUM FITNESS</span><span>LIFESTYLE</span></div>
-              <h3>The Sculpt Society</h3>
-              <p class="case-thesis">精品生活方式感最强：把孕产项目放入成熟的时尚健身品牌系统。</p>
-              <dl class="analysis-grid">
-                <div><dt>视觉信号</dt><dd>中性色空间、高质感群像、时尚编辑排版，画面轻盈且具有购买欲。</dd></div>
-                <div><dt>关键机制</dt><dd>明星教练、平台订阅和孕产专项共用同一品牌资产，降低新项目建设成本。</dd></div>
-                <div><dt>边界风险</dt><dd>审美和身体形象压力更明显，专业健康边界不如垂直品牌清楚。</dd></div>
-                <div class="takeaway"><dt>可借鉴</dt><dd>高级内容包装与群像摄影，但需要增加真实身体差异和专业安全感。</dd></div>
-              </dl>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="matrix" class="section grid-shell matrix-section">
-        <header class="section-head">
-          <div class="section-index">03</div>
-          <div>
-            <p class="eyebrow">COMPARISON MATRIX</p>
-            <h2>横向比较</h2>
-          </div>
-          <p class="section-summary">五星表示该维度的品牌表达强度，不代表医学效果或商业表现。</p>
-        </header>
-
-        <div class="table-wrap" tabindex="0" aria-label="竞品横向比较表，可横向滚动">
-          <table>
-            <thead>
-              <tr>
-                <th>品牌</th><th>专业可信</th><th>情绪温度</th><th>视觉识别</th><th>产品系统</th><th>内容传播</th><th>核心资产</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>Every Mother</th><td>★★★★★</td><td>★★★☆☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>临床证据</td></tr>
-              <tr><th>MUTU System</th><td>★★★★☆</td><td>★★★★★</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>包容语言</td></tr>
-              <tr><th>Studio Bloom</th><td>★★★★☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★★★</td><td>★★★★☆</td><td>数字服务</td></tr>
-              <tr><th>Get Mom Strong</th><td>★★★☆☆</td><td>★★★★☆</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★★</td><td>人格社群</td></tr>
-              <tr><th>MamasteFit</th><td>★★★★☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★★☆</td><td>专家 IP</td></tr>
-              <tr><th>Nourish Move Love</th><td>★★★☆☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>免费内容</td></tr>
-              <tr><th>Expectful</th><td>★★★☆☆</td><td>★★★★★</td><td>★★★★★</td><td>★★★☆☆</td><td>★★★★★</td><td>情绪内容</td></tr>
-              <tr><th>The Sculpt Society</th><td>★★★☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>精品审美</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="opportunity" class="opportunity-section">
-        <div class="grid-shell">
-          <header class="section-head light">
-            <div class="section-index">04</div>
-            <div>
-              <p class="eyebrow">MOMCOZY OPPORTUNITY</p>
-              <h2>不是另一个<br />产后健身品牌</h2>
-            </div>
-            <p class="section-summary">更合适的位置，是一个懂妈妈真实生活、能连接硬件场景、由专家共同建立的长期课程品牌。</p>
-          </header>
-
-          <div class="formula" aria-label="Momcozy 品牌机会公式">
-            <div><span>01</span><strong>WARM<br />EXPERTISE</strong><small>温暖的专业性</small></div>
-            <i>×</i>
-            <div><span>02</span><strong>GUIDED<br />JOURNEY</strong><small>清楚的渐进路径</small></div>
-            <i>×</i>
-            <div><span>03</span><strong>REAL-LIFE<br />CARE</strong><small>真实照护场景</small></div>
-            <i>×</i>
-            <div><span>04</span><strong>CONNECTED<br />ECOSYSTEM</strong><small>硬件与内容连接</small></div>
-          </div>
-
-          <div class="design-principles">
-            <article><span>PRINCIPLE 01</span><h3>专业，但不让人紧张</h3><p>用结构、专家和边界建立安全感，不用过度医疗化的视觉制造距离。</p></article>
-            <article><span>PRINCIPLE 02</span><h3>温暖，但不幼态</h3><p>避免粉色、柔弱和“完美妈妈”的惯性表达，强调平静、力量与包容。</p></article>
-            <article><span>PRINCIPLE 03</span><h3>鼓励，但不制造焦虑</h3><p>视觉反馈围绕开始、坚持和感知进步，而不是减重、身材或连续打卡。</p></article>
-            <article><span>PRINCIPLE 04</span><h3>独立，但能被 Momcozy 背书</h3><p>子品牌拥有自己的专业语言，同时借用母品牌的信任、用户和硬件触点。</p></article>
+            <button class="filter" data-filter="direct">直接 04</button>
+            <button class="filter" data-filter="coopetition">竞合 02</button>
+            <button class="filter" data-filter="adjacent">标杆 02</button>
           </div>
         </div>
-      </section>
 
-      <section class="next-section grid-shell">
-        <div class="section-index">05</div>
-        <div>
-          <p class="eyebrow">LIVING STRATEGY SITE</p>
-          <h2>后续模块</h2>
+        <div class="toolbar-actions">
+          <a class="tool-button" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
+            上游战略 ↗
+          </a>
+          <a class="tool-button tool-button-dark" href="https://github.com/bobo-zengjinbo/momcozy-academy-strategy" target="_blank" rel="noreferrer">
+            SOURCE
+          </a>
         </div>
-        <div class="next-grid">
-          <article class="is-current"><span>01 / LIVE</span><h3>视觉竞品分析</h3><p>品牌样本、视觉机制、横向比较与机会判断。</p></article>
-          <article><span>02 / NEXT</span><h3>视觉策略</h3><p>关键词、品牌坐标、设计原则与三条创意路线。</p></article>
-          <article><span>03 / PLANNED</span><h3>视觉识别系统</h3><p>Logo、色彩、字体、图形、摄影与联名规则。</p></article>
-          <article><span>04 / PLANNED</span><h3>应用验证</h3><p>课程封面、首页、专家联名和硬件赠课触点。</p></article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div><span class="mark-dot"></span>MOMCOZY / ACADEMY / DESIGN</div>
-      <p>Design strategy workspace · Based on the 2027 course-system plan by the Strategy &amp; Content team.</p>
-      <div class="footer-links">
-        <a href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">SOURCE STRATEGY ↗</a>
-        <a href="#top">BACK TO TOP ↑</a>
       </div>
-    </footer>
+
+      <main class="workspace">
+        <section class="workspace-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" data-panel="overview">
+          <div class="panel-scroll">
+            <div class="overview-grid content-frame">
+              <article class="overview-hero">
+                <div class="panel-kicker">DESIGN STRATEGY / VISUAL STUDY 01</div>
+                <h1>从课程战略<br />到品牌体验<span>.</span></h1>
+                <p>
+                  这里不是一份从头翻到尾的报告，而是设计部门持续使用的策略工作台。每个标签页只处理一个问题：来源、案例、比较或机会。
+                </p>
+                <div class="hero-actions">
+                  <button class="primary-action" data-open-tab="cases">浏览竞品案例 →</button>
+                  <button class="secondary-action" data-open-tab="strategy">查看战略关系</button>
+                </div>
+              </article>
+
+              <aside class="overview-metrics" aria-label="研究概览">
+                <div><strong>08</strong><span>品牌样本</span><small>4 直接 / 2 竞合 / 2 标杆</small></div>
+                <div><strong>05</strong><span>判断维度</span><small>专业 · 温度 · 识别 · 系统 · 传播</small></div>
+                <div><strong>01</strong><span>机会定位</span><small>温暖专业 × 渐进路径 × 真实照护</small></div>
+              </aside>
+
+              <article class="overview-card source-summary-card">
+                <div class="card-head">
+                  <span>UPSTREAM</span>
+                  <span>STRATEGY × CONTENT</span>
+                </div>
+                <h2>2027 年课程体系建设规划</h2>
+                <p>定义为什么做、首发什么、如何合作，以及课程业务怎样被验证。</p>
+                <a href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">OPEN SOURCE SITE ↗</a>
+              </article>
+
+              <article class="overview-card thesis-card">
+                <div class="card-head">
+                  <span>CORE THESIS</span>
+                  <span>DESIGN TEAM</span>
+                </div>
+                <p>多数竞品只占住一个优势。</p>
+                <h2>专业可信 × 内容人格 × 数字体验 × 生活方式</h2>
+                <strong>Momcozy 的空位，是把四者组织成一个完整系统。</strong>
+              </article>
+
+              <article class="overview-card roadmap-card">
+                <div class="card-head">
+                  <span>WORKSTREAM</span>
+                  <span>04 MODULES</span>
+                </div>
+                <ol>
+                  <li class="is-live"><span>01</span><div><strong>视觉竞品分析</strong><small>LIVE</small></div></li>
+                  <li><span>02</span><div><strong>视觉策略</strong><small>NEXT</small></div></li>
+                  <li><span>03</span><div><strong>视觉识别系统</strong><small>PLANNED</small></div></li>
+                  <li><span>04</span><div><strong>应用验证</strong><small>PLANNED</small></div></li>
+                </ol>
+              </article>
+
+              <details class="landscape-drawer">
+                <summary>
+                  <span><b>POSITION MAP</b> 竞争格局与品牌原型</span>
+                  <span>按需展开 ＋</span>
+                </summary>
+                <div class="landscape-body">
+                  <div class="position-map" aria-label="竞品定位象限">
+                    <span class="axis-label axis-top">专业 / 临床</span>
+                    <span class="axis-label axis-bottom">情绪 / 生活方式</span>
+                    <span class="axis-label axis-left">内容 / IP</span>
+                    <span class="axis-label axis-right">产品 / 平台</span>
+                    <i class="map-line map-line-x"></i>
+                    <i class="map-line map-line-y"></i>
+                    <button style="--x:73%;--y:23%" data-case-open="every-mother">Every Mother</button>
+                    <button style="--x:58%;--y:32%" data-case-open="mutu">MUTU</button>
+                    <button style="--x:78%;--y:43%" data-case-open="studio-bloom">Studio Bloom</button>
+                    <button style="--x:70%;--y:69%" data-case-open="get-mom-strong">Get Mom Strong</button>
+                    <button style="--x:28%;--y:30%" data-case-open="mamastefit">MamasteFit</button>
+                    <button style="--x:21%;--y:70%" data-case-open="nourish-move-love">NML</button>
+                    <button style="--x:37%;--y:82%" data-case-open="expectful">Expectful</button>
+                    <button style="--x:83%;--y:83%" data-case-open="sculpt-society">TSS Mama</button>
+                    <div class="momcozy-position" style="--x:61%;--y:53%"><b>MOMCOZY</b><small>OPPORTUNITY</small></div>
+                  </div>
+                  <div class="archetype-list">
+                    <article><span>A</span><div><b>临床专业型</b><p>研究、专家与问题解决建立信任。</p></div></article>
+                    <article><span>B</span><div><b>数字平台型</b><p>路径、进度和服务形成长期关系。</p></div></article>
+                    <article><span>C</span><div><b>人格社区型</b><p>创始人、态度和故事形成认同。</p></div></article>
+                    <article><span>D</span><div><b>内容流量型</b><p>免费计划和持续内容扩大入口。</p></div></article>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-panel" id="panel-strategy" role="tabpanel" aria-labelledby="tab-strategy" data-panel="strategy" hidden>
+          <div class="panel-scroll">
+            <div class="content-frame compact-panel">
+              <header class="panel-heading">
+                <div>
+                  <span class="panel-kicker">STRATEGY SOURCE / CONTENT TEAM</span>
+                  <h1>两个网站，一条工作链</h1>
+                </div>
+                <p>战略与内容部门定义业务问题；设计部门把它翻译成品牌、视觉、体验和可复用资产。</p>
+              </header>
+
+              <div class="strategy-flow">
+                <a class="strategy-node strategy-node-source" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
+                  <span>01 / UPSTREAM</span>
+                  <div>
+                    <small>STRATEGY × CONTENT</small>
+                    <h2>2027 年课程体系建设规划</h2>
+                    <p>年度目标、生命周期课程、首发组合、合作机制、资源与经营规则。</p>
+                  </div>
+                  <strong>OPEN SOURCE SITE ↗</strong>
+                </a>
+                <div class="flow-arrow"><span>INPUT</span><b>→</b><span>TRANSLATE</span></div>
+                <article class="strategy-node strategy-node-current">
+                  <span>02 / CURRENT</span>
+                  <div>
+                    <small>DESIGN TEAM</small>
+                    <h2>品牌与设计策略</h2>
+                    <p>品牌架构、视觉识别、竞品研究、内容模板、数字体验与 Campaign 落地。</p>
+                  </div>
+                  <strong>YOU ARE HERE</strong>
+                </article>
+              </div>
+
+              <div class="responsibility-grid">
+                <article>
+                  <span>战略与内容部门定义</span>
+                  <ul>
+                    <li>为什么建立课程体系</li>
+                    <li>服务哪些生命周期问题</li>
+                    <li>首发课程与定价原则</li>
+                    <li>合作、资源与经营规则</li>
+                  </ul>
+                </article>
+                <article>
+                  <span>设计部门承接</span>
+                  <ul>
+                    <li>把战略转译成品牌定位</li>
+                    <li>建立可扩展的视觉语言</li>
+                    <li>定义内容和数字体验模板</li>
+                    <li>验证关键触点与应用场景</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-panel" id="panel-cases" role="tabpanel" aria-labelledby="tab-cases" data-panel="cases" hidden>
+          <div class="case-workspace">
+            <aside class="case-sidebar" aria-label="竞品品牌列表">
+              <div class="case-sidebar-head">
+                <span>BRANDS</span>
+                <strong id="caseCount">08 RESULTS</strong>
+              </div>
+              <div class="case-nav" id="caseNav"></div>
+            </aside>
+            <div class="case-detail-wrap">
+              <article class="case-detail" id="caseDetail" aria-live="polite"></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-panel" id="panel-matrix" role="tabpanel" aria-labelledby="tab-matrix" data-panel="matrix" hidden>
+          <div class="panel-scroll">
+            <div class="content-frame compact-panel">
+              <header class="panel-heading">
+                <div>
+                  <span class="panel-kicker">COMPARISON MATRIX</span>
+                  <h1>横向比较</h1>
+                </div>
+                <p>五星表示该维度的品牌表达强度，不代表医学效果或商业表现。横向滚动查看全部指标。</p>
+              </header>
+              <div class="matrix-wrap" tabindex="0" aria-label="竞品横向比较表">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>品牌</th><th>专业可信</th><th>情绪温度</th><th>视觉识别</th><th>产品系统</th><th>内容传播</th><th>核心资产</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th>Every Mother</th><td>★★★★★</td><td>★★★☆☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>临床证据</td></tr>
+                    <tr><th>MUTU System</th><td>★★★★☆</td><td>★★★★★</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>包容语言</td></tr>
+                    <tr><th>Studio Bloom</th><td>★★★★☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★★★</td><td>★★★★☆</td><td>数字服务</td></tr>
+                    <tr><th>Get Mom Strong</th><td>★★★☆☆</td><td>★★★★☆</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★★</td><td>人格社群</td></tr>
+                    <tr><th>MamasteFit</th><td>★★★★☆</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★★☆</td><td>专家 IP</td></tr>
+                    <tr><th>Nourish Move Love</th><td>★★★☆☆</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>免费内容</td></tr>
+                    <tr><th>Expectful</th><td>★★★☆☆</td><td>★★★★★</td><td>★★★★★</td><td>★★★☆☆</td><td>★★★★★</td><td>情绪内容</td></tr>
+                    <tr><th>The Sculpt Society</th><td>★★★☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>精品审美</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-panel" id="panel-opportunity" role="tabpanel" aria-labelledby="tab-opportunity" data-panel="opportunity" hidden>
+          <div class="panel-scroll opportunity-bg">
+            <div class="content-frame compact-panel">
+              <header class="panel-heading panel-heading-light">
+                <div>
+                  <span class="panel-kicker">MOMCOZY OPPORTUNITY</span>
+                  <h1>不是另一个产后健身品牌</h1>
+                </div>
+                <p>更合适的位置，是一个懂妈妈真实生活、能连接硬件场景、由专家共同建立的长期课程品牌。</p>
+              </header>
+
+              <div class="opportunity-formula" aria-label="Momcozy 品牌机会公式">
+                <article><span>01</span><strong>WARM<br />EXPERTISE</strong><small>温暖的专业性</small></article>
+                <article><span>02</span><strong>GUIDED<br />JOURNEY</strong><small>清楚的渐进路径</small></article>
+                <article><span>03</span><strong>REAL-LIFE<br />CARE</strong><small>真实照护场景</small></article>
+                <article><span>04</span><strong>CONNECTED<br />ECOSYSTEM</strong><small>硬件与内容连接</small></article>
+              </div>
+
+              <div class="principles-grid">
+                <article><span>PRINCIPLE 01</span><h2>专业，但不让人紧张</h2><p>用结构、专家和边界建立安全感，不用过度医疗化的视觉制造距离。</p></article>
+                <article><span>PRINCIPLE 02</span><h2>温暖，但不幼态</h2><p>避免粉色、柔弱和“完美妈妈”的惯性表达，强调平静、力量与包容。</p></article>
+                <article><span>PRINCIPLE 03</span><h2>鼓励，但不制造焦虑</h2><p>视觉反馈围绕开始、坚持和感知进步，而不是减重、身材或连续打卡。</p></article>
+                <article><span>PRINCIPLE 04</span><h2>独立，但能被 Momcozy 背书</h2><p>子品牌拥有自己的专业语言，同时借用母品牌的信任、用户和硬件触点。</p></article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <dialog class="image-modal" id="imageModal">
-      <button class="modal-close" type="button" aria-label="关闭大图">CLOSE ×</button>
+      <div class="modal-bar">
+        <span id="modalTitle">WEBSITE SCREEN</span>
+        <button class="modal-close" type="button" aria-label="关闭大图">CLOSE ×</button>
+      </div>
       <img src="" alt="" />
     </dialog>
 
