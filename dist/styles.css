@@ -460,6 +460,9 @@ img { display: block; max-width: 100%; }
 .strategy-node-source p { color: rgba(255,255,255,.66); }
 .strategy-node-source:hover { background: var(--signal); }
 .strategy-node-current { background: var(--acid); }
+.strategy-node-current:is(button) { width: 100%; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.strategy-node-current:is(button):hover { background: var(--pink); }
+.strategy-node-current:is(button):focus-visible { outline: 4px solid var(--signal); outline-offset: 3px; }
 .flow-arrow {
   display: flex;
   flex-direction: column;
@@ -752,7 +755,8 @@ tbody tr:hover { background: #fbfaf5; }
 .card-green { background: #a9e9c2; }
 .card-neutral { background: #e5e4df; }
 
-.visual-workspace, .strategy-workspace { height: 100%; min-height: 0; display: grid; grid-template-rows: 48px minmax(0, 1fr); }
+.visual-workspace { height: 100%; min-height: 0; display: grid; grid-template-rows: 48px minmax(0, 1fr); }
+.strategy-workspace { height: 100%; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr); }
 .subtab-bar { display: flex; align-items: center; gap: 5px; padding: 5px var(--pad); overflow-x: auto; border-bottom: 2px solid var(--ink); background: var(--surface); scrollbar-width: none; }
 .subtab-bar::-webkit-scrollbar { display: none; }
 .subtab { height: 34px; padding: 0 14px; border: 1px solid var(--ink); border-radius: 999px; background: transparent; cursor: pointer; white-space: nowrap; font-size: 10px; font-weight: 700; }
@@ -764,6 +768,8 @@ tbody tr:hover { background: #fbfaf5; }
 .visual-subpanel[hidden] { display: none; }
 .strategy-content, .strategy-subpanel { min-height: 0; height: 100%; }
 .strategy-subpanel[hidden] { display: none; }
+.strategy-back { margin-bottom: 22px; padding: 8px 12px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--surface); font-size: 9px; font-weight: 750; letter-spacing: .05em; cursor: pointer; }
+.strategy-back:hover { background: var(--acid); }
 
 .module-page { padding-block: clamp(26px, 4vw, 52px); }
 .module-header { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .8fr); align-items: end; gap: 40px; margin-bottom: 28px; }

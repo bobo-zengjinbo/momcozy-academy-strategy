@@ -131,18 +131,13 @@
 
         <section class="workspace-panel" id="panel-strategy" role="tabpanel" aria-labelledby="tab-strategy" data-panel="strategy" hidden>
           <div class="strategy-workspace">
-            <nav class="subtab-bar" role="tablist" aria-label="战略承接子模块">
-              <button class="subtab strategy-subtab is-active" data-strategy-subtab="handoff" role="tab" aria-selected="true">部门承接</button>
-              <button class="subtab strategy-subtab" data-strategy-subtab="source-summary" role="tab" aria-selected="false">内容组品牌线索 <span>SYNTHESIS</span></button>
-            </nav>
-
             <div class="strategy-content">
               <section class="strategy-subpanel is-active" data-strategy-subpanel="handoff">
                 <div class="panel-scroll">
                   <div class="content-frame compact-panel">
                     <header class="panel-heading">
-                      <div><span class="panel-kicker">01 / STRATEGY INPUT</span><h1>战略承接</h1></div>
-                      <p>战略与内容部门定义业务问题；设计部门将它转译成品牌、视觉、体验和可复用资产。</p>
+                      <div><span class="panel-kicker">01 / STRATEGY INPUT</span><h1>战略输入</h1></div>
+                      <p>左侧进入内容组原始规划；右侧打开设计部门对其中品牌相关线索的结构化摘要。</p>
                     </header>
                     <div class="strategy-flow">
                       <a class="strategy-node strategy-node-source" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">
@@ -150,16 +145,12 @@
                         <div><small>SOURCE PLAN</small><h2>2027 年课程体系建设规划</h2><p>年度目标、生命周期课程、首发组合、合作机制、资源与经营规则。</p></div>
                         <strong>OPEN SOURCE SITE ↗</strong>
                       </a>
-                      <div class="flow-arrow"><span>INPUT</span><b>→</b><span>TRANSLATE</span></div>
-                      <article class="strategy-node strategy-node-current">
-                        <span>CURRENT / DESIGN TEAM</span>
-                        <div><small>DESIGN OUTPUT</small><h2>学院设计策略</h2><p>品牌定位、视觉识别、内容模板、数字体验、应用验证与资产规范。</p></div>
-                        <strong>DESIGN WORKSPACE</strong>
-                      </article>
-                    </div>
-                    <div class="responsibility-grid">
-                      <article><span>战略与内容部门定义</span><ul><li>为什么建立课程体系</li><li>服务哪些生命周期问题</li><li>首发课程与定价原则</li><li>合作、资源与经营规则</li></ul></article>
-                      <article><span>设计部门承接</span><ul><li>把战略转译成品牌定位</li><li>建立可扩展的视觉语言</li><li>定义内容和数字体验模板</li><li>验证关键触点与应用场景</li></ul></article>
+                      <div class="flow-arrow"><span>INPUT</span><b>→</b><span>SYNTHESIZE</span></div>
+                      <button class="strategy-node strategy-node-current" type="button" data-strategy-open="source-summary">
+                        <span>SYNTHESIS / DESIGN TEAM</span>
+                        <div><small>BRAND SIGNALS</small><h2>品牌线索摘要</h2><p>品牌角色、核心人群、品牌关系、体验原则、语言线索与内容边界。</p></div>
+                        <strong>OPEN SUMMARY →</strong>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -168,6 +159,7 @@
               <section class="strategy-subpanel" data-strategy-subpanel="source-summary" hidden>
                 <div class="panel-scroll">
                   <div class="content-frame module-page brand-page source-summary-page">
+                    <button class="strategy-back" type="button" data-strategy-open="handoff">← 返回战略输入</button>
                     <header class="module-header"><div><span>01.2 / CONTENT TEAM SYNTHESIS</span><h1>品牌线索摘要</h1></div><p>这里不是设计部门制定的品牌策略，而是对内容组现有规划中品牌相关信息的归纳，作为后续品牌工作的输入。</p></header>
 
                     <a class="brand-source-note" href="https://momcozy-course-plan-2027.vercel.app/" target="_blank" rel="noreferrer">

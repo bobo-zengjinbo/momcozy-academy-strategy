@@ -19,7 +19,7 @@ const visualViews = {
 };
 
 const strategyViews = {
-  handoff: '部门承接',
+  handoff: '战略输入',
   'source-summary': '内容组品牌线索',
 };
 
@@ -352,6 +352,10 @@ subTabs.forEach((tab) => {
 
 strategyTabs.forEach((tab) => {
   tab.addEventListener('click', () => setStrategyTab(tab.dataset.strategySubtab));
+});
+
+document.querySelectorAll('[data-strategy-open]').forEach((control) => {
+  control.addEventListener('click', () => setStrategyTab(control.dataset.strategyOpen));
 });
 
 document.querySelectorAll('[data-open-tab]').forEach((control) => {
